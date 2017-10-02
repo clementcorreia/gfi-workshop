@@ -1,0 +1,1 @@
+<p>La page que vous demandez n'existe pas. <a href="?">Cliquez ici</a> pour retourner à l'accueil.</p>
