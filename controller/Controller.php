@@ -26,7 +26,7 @@ class Controller {
 
     public static function identification() {
         $bdd = Model::$bdd;
-        $query = $bdd->query("");
+        //$query = $bdd->query("");
     }
 
     /**
