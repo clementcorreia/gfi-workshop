@@ -20,7 +20,9 @@
 				<ul class="right">
 					<?php
 						if(isset($_SESSION['user'])) {
+							$u = unserialize($_SESSION['user']);
 					?>
+					<li>Connecté en tant que : <?php echo $u->getMail(); ?></li>
 					<li><a href="?action=deconnection"><i class="material-icons left">exit_to_app</i> Déconnexion</a></li>
 					<?php
 						}

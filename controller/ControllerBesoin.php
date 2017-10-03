@@ -15,9 +15,16 @@ class ControllerBesoin {
      * @return  void
      */
     public static function readAll() {
-        $pagetitle = "";
-        $title = "";
+        $pagetitle = "Liste des besoins";
+        $title = "$pagetitle";
         $view = "list";
+        require File::build_path(array('view','view.php'));  // affiche la vue
+    }
+
+    public static function add() {
+        $pagetitle = "Nouveau besoin";
+        $title = "$pagetitle";
+        $view = "edit";
         require File::build_path(array('view','view.php'));  // affiche la vue
     }
 
