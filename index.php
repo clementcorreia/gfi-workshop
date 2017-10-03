@@ -7,21 +7,10 @@ $DS = DIRECTORY_SEPARATOR;
 require_once "lib".$DS."File.php";
 
 require_once File::build_path(array('controller','Controller.php'));
-require_once File::build_path(array('controller','ControllerEcriture.php'));
-require_once File::build_path(array('controller','ControllerHistorique.php'));
-require_once File::build_path(array('controller','ControllerImport.php'));
-require_once File::build_path(array('controller','ControllerParametre.php'));
-require_once File::build_path(array('controller','ControllerUtilisateur.php'));
-require_once File::build_path(array('config','Conf.php'));
+require_once File::build_path(array('controller','ControllerBesoin.php'));
 require_once File::build_path(array('model','Model.php'));
-require_once File::build_path(array('model','ModelCategorie.php'));
-require_once File::build_path(array('model','ModelEcriture.php'));
-require_once File::build_path(array('model','ModelFacture.php'));
-require_once File::build_path(array('model','ModelImport.php'));
-require_once File::build_path(array('model','ModelMotCle.php'));
-require_once File::build_path(array('model','ModelUtilisateur.php'));
-require_once File::build_path(array('model','ModelWarning.php'));
-require_once File::build_path(array('model','ModelWarningType.php'));
+require_once File::build_path(array('model','ModelCommercial.php'));
+require_once File::build_path(array('model','ModelBesoin.php'));
 
 session_start();
 

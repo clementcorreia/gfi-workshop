@@ -14,8 +14,8 @@ class Controller {
      */
     public static function readAll() {
         $pagetitle = ""; // pagetitle est le titre affiché dans l'onglet
-        $title = "";   // title est le titre affiché sur la page
-        $view = "list";      // view est le nom du fichier à appeler pour afficher la page
+        $title = "Identification";   // title est le titre affiché sur la page
+        $view = "login";      // view est le nom du fichier à appeler pour afficher la page
         require File::build_path(array('view','view.php'));  // affiche la vue
     }
 
