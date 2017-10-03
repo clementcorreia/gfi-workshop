@@ -38,6 +38,14 @@ class Controller {
         }
     }
 
+    public static function deconnection() {
+        if (isset($_SESSION['user'])) {
+            session_unset();     // détruire la variable $_SESSION pour la durée d'exécution 
+            session_destroy();   // détruire les données de session stockées
+            header('Location: ?');
+        }
+    }
+
     /**
      * Affiche une page d'erreur lorsqu'une erreur a lieu lors d'une redirection
      * @return  void    

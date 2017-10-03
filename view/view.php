@@ -14,6 +14,13 @@
 			<ul>
 				<li><a href="?controller=besoin">Liste des besoins</a></li>
 				<li><a href="?controller=besoin&action=add">Nouveau besoin</a></li>
+				<?php
+					if(isset($_SESSION['user'])) {
+				?>
+				<li><a href="?action=deconnection">Déconnexion</a></li>
+				<?php
+					}
+				?>
 			</ul>
 		</nav>
 		<h4><?php if(isset($title)) echo ucfirst($title); else echo "Unknown title"; ?></h4>

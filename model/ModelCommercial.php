@@ -34,7 +34,7 @@ class ModelCommercial extends Model {
             'm' => $mail
         );
         $res = $req_prep->execute($values);
-        if($res) {
+        if($res && $req_prep->rowCount()>0) {
         	return serialize($req_prep->fetchObject("ModelCommercial"));
         }
         else {
