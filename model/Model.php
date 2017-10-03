@@ -23,7 +23,7 @@ class Model {
 		$host = "localhost";
 		$dbname = "workshop";
 		$pass = "workshop";
-		$dsn = "mariadb:dbname=$dbname;host=$host";
+		$dsn = "mysql:dbname=$dbname;host=$host";
 		// Connexion à la base de données    
 
 		try {
