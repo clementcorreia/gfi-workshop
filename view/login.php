@@ -1,4 +1,4 @@
-<form action="?action=" method="POST">
+<form action="?action=identification" method="POST">
 	<p>
 		<label>Email : </label>
 		<input type="email" name="email" placeholder="exemple@gfi.fr" class="validate" />
