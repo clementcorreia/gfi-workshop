@@ -16,6 +16,9 @@ class Controller {
         $pagetitle = ""; // pagetitle est le titre affiché dans l'onglet
         $title = "Identification";   // title est le titre affiché sur la page
         $view = "login";      // view est le nom du fichier à appeler pour afficher la page
+        $bdd = Model::$bdd;
+        $query = $bdd->query("SHOW TABLES;");
+        var_dump($query);
         require File::build_path(array('view','view.php'));  // affiche la vue
     }
 

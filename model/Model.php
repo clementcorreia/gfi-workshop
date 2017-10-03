@@ -19,11 +19,18 @@ class Model {
 	 * @return 	void
 	 */
 	public static function Init() {
-		$login = "";
-		$host = "";
-		$dbname = "";
-		$pass = "";
+		$login = "workshop";
+		$host = "localhost";
+		$dbname = "workshop";
+		$pass = "workshop";
+		$dsn = "mysql:dbname=$dbname;host=$host";
 		// Connexion à la base de données    
+
+		try {
+			$bdd = new PDO($dsn, $login, $pass);
+		} catch (PDOException $e) {
+			echo 'Connexion échouée : ' . $e->getMessage();
+		}
 	}
 
 }
