@@ -11,17 +11,22 @@
 	<div class="container">
 		<h1>GFI Commercial Tools</h1>
 		<nav>
-			<ul>
-				<li><a href="?controller=besoin">Liste des besoins</a></li>
-				<li><a href="?controller=besoin&action=add">Nouveau besoin</a></li>
-				<?php
-					if(isset($_SESSION['user'])) {
-				?>
-				<li><a href="?action=deconnection">Déconnexion</a></li>
-				<?php
-					}
-				?>
-			</ul>
+			<div class="nav-wrapper">
+				<ul>
+					<li><a href="?controller=besoin">Liste des besoins</a></li>
+					<li><a href="?controller=besoin&action=add">Nouveau besoin</a></li>
+					
+				</ul>
+				<ul class="right">
+					<?php
+						if(isset($_SESSION['user'])) {
+					?>
+					<li><a href="?action=deconnection"><i class="material-icons left">exit_to_app</i> Déconnexion</a></li>
+					<?php
+						}
+					?>
+				</ul>
+			</div>
 		</nav>
 		<h4><?php if(isset($title)) echo ucfirst($title); else echo "Unknown title"; ?></h4>
 		<ul><li class="divider"></li></ul>
