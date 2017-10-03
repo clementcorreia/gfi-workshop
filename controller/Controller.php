@@ -13,10 +13,20 @@ class Controller {
      * @return  void
      */
     public static function readAll() {
-        $pagetitle = ""; // pagetitle est le titre affiché dans l'onglet
-        $title = "Identification";   // title est le titre affiché sur la page
-        $view = "login";      // view est le nom du fichier à appeler pour afficher la page
+        if(isset($_SESSION['user'])) {
+            ControllerBesoin::readAll();
+        }
+        else {
+            $pagetitle = "Identification"; // pagetitle est le titre affiché dans l'onglet
+            $title = "$pagetitle";   // title est le titre affiché sur la page
+            $view = "login";      // view est le nom du fichier à appeler pour afficher la page  
+        }
         require File::build_path(array('view','view.php'));  // affiche la vue
+    }
+
+    public static function identification() {
+        $bdd = Model::$bdd;
+        $query = $bdd->query("");
     }
 
     /**

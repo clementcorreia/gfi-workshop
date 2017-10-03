@@ -19,10 +19,10 @@ class Model {
 	 * @return 	void
 	 */
 	public static function Init() {
-		$login = "workshop";
+		$login = "root";
 		$host = "localhost";
 		$dbname = "workshop";
-		$pass = "workshop";
+		$pass = "root";
 		$dsn = "mysql:dbname=$dbname;host=$host";
 		// Connexion à la base de données    
 
