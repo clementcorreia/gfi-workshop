@@ -29,7 +29,7 @@ class ModelCommercial extends Model {
 	}
 
 	public static function identification($mail) {
-		$req_prep = $bdd->prepare("SELECT * FROM utilisateur WHERE mail = :m");
+		$req_prep = Model::$bdd->prepare("SELECT * FROM utilisateur WHERE mail = :m");
         $values = array(
             'm' => $mail
         );

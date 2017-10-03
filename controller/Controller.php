@@ -25,7 +25,6 @@ class Controller {
     }
 
     public static function identification() {
-        $bdd = Model::$bdd;
         if (isset($_POST['mail']) && !empty($_POST['mail'])) {
             $mail = htmlspecialchars($_POST['mail']);
             $retour = ModelCommercial::identification($mail);
