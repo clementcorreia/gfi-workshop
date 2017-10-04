@@ -18,42 +18,38 @@ $(document).ready(function() {
 		select: new Date(),
 		closeOnSelect: true // Close upon selecting a date,
 	});
-
-	/*(function() {
-		var ev = new $.Event('remove'), orig = $.fn.remove;
-		$.fn.remove = function() {
-			if(confirm("Etes vous sur de vouloir supprimer cet item ?")) {
-				$(this).trigger(ev);
-				return orig.apply(this, arguments);
-			}
-			else {
-				$(this).css({'style' : 'translateX(0)'});
-				$(this).style = "none";
-				$(this).html() = $(this).html();
-				return false;
-			}
-		}
-	})();
-
-	$('.dismissable').bind('remove', function(event) {
-		if(confirm("Êtes vous sur de vouloir supprimer ce besoin ?")) {
-			alert("yes");
-		}
-		else {
-			alert("no");
-			return false;
-		}
-		var object_id = $(this).data('id');
-		// do pre-mortem stuff here
-		// 'this' is still a reference to the element, before removing it
-	});*/
-
 });
 
 function callback_dismissable(e) {
-	//alert("hi");
 	if(confirm("Êtes-vous sur de vouloir supprimer cet item ?")) {
-		e.remove();
+		var id = e.data('id');
+		/*$.ajax({
+			// chargement du fichier externe monfichier-ajax.php 
+			url      : "/asset/php/suppr_besoin.php",
+			// Passage des données au fichier externe (ici le nom cliqué)  
+			data     : {id_besoin: id},
+			cache    : false,
+			dataType : "json",
+			error    : 	function(request, error) { // Info Debuggage si erreur         
+							alert("Erreur : responseText: "+request.responseText);
+						},
+			success  : 	function(data) {  
+							// Informe l'utilisateur que l'opération est terminé et renvoie le résultat
+							if(!data.retour) {
+								alert("erreur");
+							}
+							else {
+								//alert("supprimé");
+							}
+						}       
+		});*/
+		var tagname = $(e).prop("tagName");
+		if(tagname=="a" || tagname== "A") {
+			e.parent().remove();
+		}
+		else {
+			e.remove();
+		}
 	}
 	else {
 		location.reload();

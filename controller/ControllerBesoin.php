@@ -18,6 +18,7 @@ class ControllerBesoin {
         $pagetitle = "Liste des besoins";
         $title = "$pagetitle";
         $view = "list";
+        $tab_besoins = ModelBesoin::selectAll();
         require File::build_path(array('view','view.php'));  // affiche la vue
     }
 

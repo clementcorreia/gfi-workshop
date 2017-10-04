@@ -6227,16 +6227,6 @@ if (Vel) {
             $this.velocity({ translateX: fullWidth
             }, { duration: 100, queue: false, easing: 'easeOutQuad', complete: function () {
                 $this.css('border', 'none');
-                /*$this.velocity({ height: 0, padding: 0
-                }, { duration: 200, queue: false, easing: 'easeOutQuad', complete: function () {
-                    if(confirm("Êtes-vous sur de vouloir supprimer cet item ?")) {
-                      $this.remove();
-                    }
-                    else {
-                      location.reload();
-                    }
-                  }
-                });*/
                 $this.velocity({ height: 0, padding: 0
                 }, { duration: 200, queue: false, easing: 'easeOutQuad', complete: function () {
                   callback_dismissable($this);

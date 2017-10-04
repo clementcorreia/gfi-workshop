@@ -8,6 +8,14 @@
  */
 class ModelBesoin extends Model {
 
+	private $id_besoin;
+	private $id_commercial;
+	private $date_creation;
+
+	public static function selectAll() {
+
+	}
+
 }
 
 ?>
