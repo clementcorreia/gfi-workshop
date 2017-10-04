@@ -23,7 +23,7 @@ $(document).ready(function() {
 function callback_dismissable(e) {
 	if(confirm("Êtes-vous sur de vouloir supprimer cet item ?")) {
 		var id = e.data('id');
-		/*$.ajax({
+		$.ajax({
 			// chargement du fichier externe monfichier-ajax.php 
 			url      : "/asset/php/suppr_besoin.php",
 			// Passage des données au fichier externe (ici le nom cliqué)  
@@ -42,17 +42,8 @@ function callback_dismissable(e) {
 								//alert("supprimé");
 							}
 						}       
-		});*/
-		var tagname = $(e).prop("tagName");
-		if(tagname=="a" || tagname== "A") {
-			e.parent().remove();
-		}
-		else {
-			e.remove();
-		}
+		});
 	}
-	else {
-		location.reload();
-	}
+	location.reload();
 }
 

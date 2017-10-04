@@ -1,36 +1,36 @@
 <!-- Page de la "Liste des besoins" -->
+<?php
+	if($tab_besoins && count($tab_besoins)>0) {
+?>
 <ul class="collection">
-	<li class="collection-item avatar dismissable" data-id="1">
+	<?php
+		foreach ($tab_besoins as $besoin) {
+			$id = $besoin->getId();
+			$titre = $besoin->getTitre();
+			$client = $besoin->getClient();
+			$statut = $besoin->getStatut();
+	?>
+	<li class="collection-item avatar dismissable" data-id="<?php echo $id; ?>">
 		<i class="material-icons circle">folder</i>
 		<div>
-			<span class="title">Title 1</span>
+			<span class="title"><?php echo '['.$client.'] '.$titre; ?></span>
 			<p>
-				First Line <br>
-				Second Line
+				<?php echo $statut; ?>
 			</p>
 		</div>
-		<a href="#" class="secondary-content" onclick="callback_dismissable($(this)); return false;" data-id="1"><i class="material-icons">delete</i></a>
+		<a href="#" class="secondary-content" onclick="callback_dismissable($(this)); return false;" data-id="<?php echo $id; ?>"><i class="material-icons">delete</i></a>
 	</li>
-	<li class="collection-item avatar dismissable" data-id="2">
-		<i class="material-icons circle">folder</i>
-		<div>
-			<span class="title">Title 2</span>
-			<p>
-				First Line <br>
-				Second Line
-			</p>
-		</div>
-		<a href="#" class="secondary-content" onclick="callback_dismissable($(this)); return false;" data-id="2"><i class="material-icons">delete</i></a>
-	</li>
-	<li class="collection-item avatar dismissable" data-id="3">
-		<i class="material-icons circle">folder</i>
-		<div>
-			<span class="title">Title 3</span>
-			<p>
-				First Line <br>
-				Second Line
-			</p>
-		</div>
-		<a href="#" class="secondary-content" onclick="callback_dismissable($(this)); return false;" data-id="3"><i class="material-icons">delete</i></a>
-	</li>
+	<?php
+		}
+	?>
 </ul>
+<?php
+	}
+	else {
+?>
+<p>
+	<i>Aucun besoin enregistré...</i>
+</p>
+<?php
+	}
+?>
