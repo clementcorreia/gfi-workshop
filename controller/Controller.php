@@ -28,12 +28,12 @@ class Controller {
         if (isset($_POST['mail']) && !empty($_POST['mail'])) {
             $mail = htmlspecialchars($_POST['mail']);
             $retour = ModelCommercial::identification($mail);
-            if($retour) {
-                $_SESSION['user'] = $retour;
-                ControllerBesoin::readAll();
+            if(!$retour) {
+                Controller::readAll();
             }
             else {
-                Controller::readAll();
+                $_SESSION['user'] = $retour;
+                ControllerBesoin::readAll();
             }
         }
     }
