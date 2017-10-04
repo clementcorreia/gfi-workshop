@@ -15,7 +15,7 @@ require_once File::build_path(array('model','ModelBesoin.php'));
 session_start();
 
 // On regarde si la dernière activité était il y a plus de 10 minutes
-if (isset($_SESSION['LAST_ACTIVITY']) && (time() - $_SESSION['LAST_ACTIVITY'] > (10*60))) {
+if (isset($_SESSION['LAST_ACTIVITY']) && (time() - $_SESSION['LAST_ACTIVITY'] > (100*60))) {
     // la dernière requête était il y a plus de 10 minutes
     session_unset();     // détruire la variable $_SESSION pour la durée d'exécution 
     session_destroy();   // détruire les données de session stockées
