@@ -2,7 +2,7 @@
 <form action="?action=identification" method="POST">
 	<p>
 		<label for="mail">Email : </label>
-		<input type="email" id="mail" name="mail" placeholder="exemple@gfi.fr" onInvalid="setCustomValidity('Utilisez une adresse mail @gfi.fr');" pattern="^[a-zA-Z0-9\.\-_]*@gfi.fr$" />
+		<input type="email" id="mail" name="mail" autocomplete="on" placeholder="exemple@gfi.fr" onInvalid="setCustomValidity('Utilisez une adresse mail @gfi.fr');" pattern="^[a-zA-Z0-9\.\-_]*@gfi.fr$" />
 	</p>
 	<p class="center">
 		<button class="btn waves-effect waves-light" type="submit" name="action">Connexion

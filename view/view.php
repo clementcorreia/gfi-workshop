@@ -5,7 +5,9 @@
 	<title>GFI Commercial - <?php echo $pagetitle; ?></title>
 	<link rel="stylesheet" type="text/css" href="asset/materialize/css/materialize.css" />
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
 	<script type="text/javascript" src="asset/materialize/js/materialize.js"></script>
+	<script type="text/javascript" src="asset/js/app.js?v=0.1"></script>
 </head>
 <body>
 	<div class="container">
