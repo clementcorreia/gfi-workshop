@@ -25,7 +25,7 @@ function callback_dismissable(e) {
 		var id = e.data('id');
 		$.ajax({
 			// chargement du fichier externe monfichier-ajax.php 
-			url      : "/asset/php/suppr_besoin.php",
+			url      : "/asset/php/suppr_besoin.php?ajax=1",
 			// Passage des données au fichier externe (ici le nom cliqué)  
 			data     : {id_besoin: id},
 			cache    : false,

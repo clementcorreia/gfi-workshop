@@ -31,7 +31,7 @@
 	</div>
 	<div class="input-field">
 		<input type="text" name="date_debut" id="date_debut" class="datepicker" />
-		<label for="date_debut">Start at the latest" class="datepicker</label>
+		<label for="date_debut">Start at the latest</label>
 	</div>
 	<div class="input-field">
 		<input type="text" name="lieu" id="lieu" />
@@ -41,9 +41,14 @@
 		<input type="text" name="prix" id="prix" />
 		<label for="prix">Rate</label>
 	</div>
-	<div class="input-field">
-		<input type="text" name="description" id="description" />
-		<label for="description">Description file</label>
+	<div class="file-field input-field">
+		<div class="btn require">
+			<span>Télécharger</span>
+			<input type="file" name="description_file" multiple />
+		</div>
+		<div class="file-path-wrapper">
+			<input class="file-path validate" type="text" placeholder="Description file" />
+		</div>
 	</div>
 	<div class="input-field">
 		<input type="text" name="consultant1" id="consultant1" />

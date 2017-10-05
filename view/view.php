@@ -15,9 +15,19 @@
 		<nav>
 			<div class="nav-wrapper">
 				<ul>
-					<li><a href="?controller=besoin">Liste des besoins</a></li>
-					<li><a href="?controller=besoin&action=add">Nouveau besoin</a></li>
-					
+					<?php
+						$list_besoins = false;
+						$new_besoin = false;
+						if (isset($_GET['controller']) && htmlspecialchars($_GET['controller'])=="besoin") {
+							$list_besoins = true;
+							if (isset($_GET['action']) && htmlspecialchars($_GET['action'])=="add") {
+								$list_besoins = false;
+								$new_besoin = true;
+							}
+						}
+					?>
+					<li <?php if($list_besoins && !$new_besoin) echo 'class="active"'; ?>><a href="?controller=besoin">Liste des besoins</a></li>
+					<li <?php if(!$list_besoins && $new_besoin) echo 'class="active"'; ?>><a href="?controller=besoin&action=add">Nouveau besoin</a></li>
 				</ul>
 				<ul class="right">
 					<?php
