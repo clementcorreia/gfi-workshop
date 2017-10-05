@@ -11,7 +11,6 @@ require_once File::build_path(array('controller','ControllerBesoin.php'));
 require_once File::build_path(array('model','Model.php'));
 require_once File::build_path(array('model','ModelCommercial.php'));
 require_once File::build_path(array('model','ModelBesoin.php'));
-require_once File::build_path(array('asset','php','suppr_besoin.php'));
 
 session_start();
 

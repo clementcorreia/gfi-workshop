@@ -1,9 +1,13 @@
 <?php
+if (isset($_REQUEST['myFunction']) && $_REQUEST['myFunction'] != '') {
+    $_REQUEST['myFunction']($_REQUEST);
+}
 
-if($_GET['ajax'] == 1){
-    $id=$_GET['id_besoin'];
+function del_besoin($data) {
+
+    $id=$data['id_besoin'];
     $retour = true;
-
+    require_once "../../model/Model.php";
     $bdd = Model::$bdd;
 
     $req_prep = $bdd->prepare("DELETE FROM fiches_besoin WHERE id_besoin = :id");
@@ -15,6 +19,8 @@ if($_GET['ajax'] == 1){
     $json = array('retour' => $retour);
 
     echo json_encode($json);
+
 }
+
 
 ?>

@@ -6,8 +6,8 @@
 	<link rel="stylesheet" type="text/css" href="asset/materialize/css/materialize.css" />
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
-	<script type="text/javascript" src="asset/materialize/js/materialize.js?v=2"></script>
-	<script type="text/javascript" src="asset/js/app.js?v=2"></script>
+	<script type="text/javascript" src="asset/materialize/js/materialize.js?v=3"></script>
+	<script type="text/javascript" src="asset/js/app.js?v=3"></script>
 </head>
 <body>
 	<div class="container">

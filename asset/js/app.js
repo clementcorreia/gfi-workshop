@@ -25,21 +25,25 @@ function callback_dismissable(e) {
 		var id = e.data('id');
 		$.ajax({
 			// chargement du fichier externe monfichier-ajax.php 
-			url      : "/asset/php/suppr_besoin.php?ajax=1",
+			url      : "/asset/php/suppr_besoin.php",
+			type 	 : 'POST',
 			// Passage des données au fichier externe (ici le nom cliqué)  
-			data     : {id_besoin: id},
+			data     : {
+				id_besoin: id, 
+				myFunction: 'del_besoin'
+			},
 			cache    : false,
 			dataType : "json",
 			error    : 	function(request, error) { // Info Debuggage si erreur         
-							alert("Erreur : responseText: "+request.responseText);
+							console.log("Erreur : responseText: "+request.responseText);
 						},
 			success  : 	function(data) {  
 							// Informe l'utilisateur que l'opération est terminé et renvoie le résultat
 							if(!data.retour) {
-								alert("erreur");
+
 							}
 							else {
-								//alert("supprimé");
+
 							}
 						}       
 		});
