@@ -69,6 +69,34 @@ class ModelBesoin extends Model {
 		return false;
 	}
 
+	public static function save($data) {
+
+		$params = "(";
+		$keys = "(";
+		
+		foreach ($data as $key => $value) {
+			if($key!='rowid') {
+				$params.='\''.utf8_decode(addslashes($value)).'\', ';
+				$keys.=$key.", ";
+			}
+		}
+
+		$params = rtrim($params);
+		$params = rtrim($params,',');
+		$params .= ")";
+		$keys = rtrim($keys);
+		$keys = rtrim($keys,',');
+		$keys .= ")";
+
+		$sql = "INSERT INTO fiches_besoin $keys VALUES $params;";
+		var_dump($sql);
+
+		$req_prep = Model::$bdd->query($sql);
+
+		return $req_prep;
+
+	}
+
 }
 
 ?>

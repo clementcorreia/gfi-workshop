@@ -1,6 +1,6 @@
 <!-- Page du formulaire "Nouveau besoin" -->
 <?php echo date("j M y"); ?>
-<form method="post" action="">
+<form method="post" action="?controller=besoin&action=added">
 	<div class="input-field">
 		<input type="text" name="rs_client" id="rs_client" class="validate" />
 		<label for="rs_client">Client</label>
@@ -17,9 +17,11 @@
 		<input type="text" name="description" id="description" />
 		<label for="description">Full description</label>
 	</div>
+	<p>3 main key success factors</p>
 	<div class="input-field">
-		<input type="text" name="s_factor" id="s_factor" />
-		<label for="s_factor">3 main key success factors</label>
+		<input type="text" class="col s4" name="s_factor1" id="s_factor1" placeholder="#1" />
+		<input type="text" class="col s4" name="s_factor2" id="s_factor2" placeholder="#2" />
+		<input type="text" class="col s4" name="s_factor3" id="s_factor3" placeholder="#3" />
 	</div>
 	<div class="input-field">
 		<input type="text" name="duree" id="duree" />
@@ -76,7 +78,7 @@
 		<option>Lost</option>
 	</select>
 	<p class="center">
-		<button class="btn waves-effect waves-light" type="submit" name="action">Save & Share
+		<button class="btn waves-effect waves-light" type="submit">Save & Share
 			<i class="material-icons right">send</i>
 		</button>
 	</p>

@@ -7,6 +7,7 @@ $(document).ready(function() {
 		clear: 'Clear',
 		close: 'Ok',
 		format: 'dd/mm/yyyy',
+		formatSubmit: 'yyyy-mm-dd',
 		firstDay: 1,
 		monthsFull: ['Janvier', 'Février', 'Mars', 'Avril', 'Mai', 'Juin', 'Juillet', 'Août', 'Septembre', 'Octobre', 'Novembre', 'Décembre'],
 		monthsShort: ['Jan', 'Fév', 'Mar', 'Avr', 'Mai', 'Juin', 'Juil', 'Août', 'Sep', 'Oct', 'Nov', 'Déc'],
