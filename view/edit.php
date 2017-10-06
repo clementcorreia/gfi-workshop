@@ -78,7 +78,7 @@
 		<option>Lost</option>
 	</select>
 	<p class="center">
-		<button class="btn waves-effect waves-light" type="submit">Save & Share
+		<button class="btn-large waves-effect waves-light" type="submit">Save & Share
 			<i class="material-icons right">send</i>
 		</button>
 	</p>

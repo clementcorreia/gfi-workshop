@@ -14,7 +14,7 @@
 		<i class="material-icons circle">folder</i>
 		<div>
 			<span class="title"><?php echo '['.$client.'] '.$titre; ?></span>
-			<p>
+			<p class="<?php if($statut == 'Open') { echo 'orange-text'; } else if($statut == 'Win') { echo 'green-text'; } else if($statut == 'Lost') { echo 'red-text'; }?>">
 				<?php echo $statut; ?>
 			</p>
 		</div>

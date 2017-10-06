@@ -5,7 +5,7 @@
 		<input type="email" id="mail" name="mail" autocomplete="on" placeholder="exemple@gfi.fr" onInvalid="setCustomValidity('Utilisez une adresse mail @gfi.fr');" pattern="^[a-zA-Z0-9\.\-_]*@gfi.fr$" />
 	</p>
 	<p class="center">
-		<button class="btn waves-effect waves-light" type="submit" name="action">Connexion
+		<button class="btn-large waves-effect waves-light" type="submit" name="action">Connexion
 			<i class="material-icons right">send</i>
 		</button>
 	</p>
