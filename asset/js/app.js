@@ -19,6 +19,7 @@ $(document).ready(function() {
 		select: new Date(),
 		closeOnSelect: true // Close upon selecting a date,
 	});
+	$(".button-collapse").sideNav();
 });
 
 function callback_dismissable(e) {
