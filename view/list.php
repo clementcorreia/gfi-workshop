@@ -2,6 +2,27 @@
 <?php
 	if($tab_besoins && count($tab_besoins)>0) {
 ?>
+<div class="row">
+	<form class="col s12 m4">
+		<div class="input-field">
+			<label class="label-icon" for="search" style="width: 40px;"><i class="material-icons">search</i></label>
+			<input id="search" type="search" style="margin-left: 40px;" required />
+			<i class="material-icons" style="margin-right: -80px;">close</i>
+		</div>
+	</form>
+	<div class="col s12 m7 offset-m1">
+		<div class="col m6 s12">
+			<p>
+				Statut
+				<a href="?controller=besoin&tri=statut&order=desc"><i class="material-icons small">arrow_drop_down</i></a>
+				<a href="?controller=besoin&tri=statut&order=asc"><i class="material-icons small">arrow_drop_up</i></a>
+			</p>
+		</div>
+		<div class="col m6 s12">
+			
+		</div>
+	</div>
+</div>
 <ul class="collection">
 	<?php
 		foreach ($tab_besoins as $besoin) {

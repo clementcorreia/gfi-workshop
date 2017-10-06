@@ -18,7 +18,11 @@ class ControllerBesoin {
         $pagetitle = "Liste des besoins";
         $title = "$pagetitle";
         $view = "list";
-        $tab_besoins = ModelBesoin::selectAll();
+        if(isset($_GET['tri'])) $tri = htmlspecialchars($_GET['tri']);
+        else $tri = "";
+        if(isset($_GET['order'])) $order = strtoupper(htmlspecialchars($_GET['order']));
+        else $order = "";
+        $tab_besoins = ModelBesoin::selectAll($tri, $order);
         require File::build_path(array('view','view.php'));  // affiche la vue
     }
 

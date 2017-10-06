@@ -51,13 +51,17 @@ class ModelBesoin extends Model {
 		return $this->statut;
 	}
 
-	public static function selectAll() {
+	public static function selectAll($tri="", $order="") {
 		if (isset($_SESSION['user'])) {
 			$user = unserialize($_SESSION['user']);
 			$id_commercial = $user->getId();
 			$tab_besoins = array();
-
-			$req_prep = Model::$bdd->prepare("SELECT * FROM fiches_besoin WHERE id_commercial = :idc;");
+			if($tri!="" && $order!="") {
+				$req_prep = Model::$bdd->prepare("SELECT * FROM fiches_besoin WHERE id_commercial = :idc ORDER BY $tri $order;");
+			}
+			else {
+				$req_prep = Model::$bdd->prepare("SELECT * FROM fiches_besoin WHERE id_commercial = :idc;");
+			}
 			$req_prep->execute(array('idc'=>$id_commercial));
 			if($req_prep) {
 				while($data = $req_prep->fetchObject("ModelBesoin")) {
