@@ -110,7 +110,6 @@ class ModelBesoin extends Model {
 		$keys .= ")";
 
 		$sql = "INSERT INTO fiches_besoin $keys VALUES $params;";
-		var_dump($sql);
 
 		$req_prep = Model::$bdd->query($sql);
 
