@@ -30,6 +30,7 @@ class ControllerBesoin {
         $pagetitle = "Nouveau besoin";
         $title = "$pagetitle";
         $view = "edit";
+        $tab_rs_client = ModelBesoin::selectRsClient();
         require File::build_path(array('view','view.php'));  // affiche la vue
     }
 

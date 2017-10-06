@@ -73,6 +73,23 @@ class ModelBesoin extends Model {
 		return false;
 	}
 
+	public static function selectRsClient() {
+		if (isset($_SESSION['user'])) {
+			$user = unserialize($_SESSION['user']);
+			$id_commercial = $user->getId();
+			$tab_rs_client = array();
+			$req_prep = Model::$bdd->prepare("SELECT DISTINCT rs_client client FROM fiches_besoin WHERE id_commercial = :idc;");
+			$req_prep->execute(array('idc'=>$id_commercial));
+			if($req_prep) {
+				while($data = $req_prep->fetch()) {
+					$tab_rs_client[] = $data['client'];
+				}
+				return $tab_rs_client;
+			}
+		}
+		return false;
+	}
+
 	public static function save($data) {
 
 		$params = "(";

@@ -2,8 +2,8 @@
 <?php echo date("j M y"); ?>
 <form method="post" action="?controller=besoin&action=added">
 	<div class="input-field">
-		<input type="text" name="rs_client" id="rs_client" class="validate" />
-		<label for="rs_client">Client</label>
+		<input type="text" name="rs_client" id="autocomplete-input" class="validate autocomplete" />
+		<label for="autocomplete-input">Client</label>
 	</div>
 	<div class="input-field">
 		<input type="text" name="contact" id="contact" />
@@ -84,3 +84,26 @@
 	</p>
 </form>
 <div>&nbsp;</div>
+<script type="text/javascript">
+$(document).ready(function() {
+$('input.autocomplete').autocomplete({
+	data: {
+		<?php 
+			$res = "";
+			if (count($tab_rs_client) >1) {
+				for ($i=0; $i < count($tab_rs_client)-1; $i++) {
+					$res .= '"'.$tab_rs_client[$i].'": null, ';
+				}
+			}
+			$res .= '"'.$tab_rs_client[count($tab_rs_client)-1].'": null';
+			print $res;
+		?>
+	},
+	limit: 20, // The max amount of results that can be shown at once. Default: Infinity.
+	onAutocomplete: function(val) {
+	  // Callback function when value is autcompleted.
+	},
+	minLength: 1, // The minimum length of the input for the autocomplete to start. Default: 1.
+});
+});
+</script>
