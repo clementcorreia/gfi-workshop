@@ -17,9 +17,23 @@
 				<a href="?controller=besoin&tri=statut&order=desc"><i class="material-icons small">arrow_drop_down</i></a>
 				<a href="?controller=besoin&tri=statut&order=asc"><i class="material-icons small">arrow_drop_up</i></a>
 			</p>
+			<p>
+				Titre
+				<a href="?controller=besoin&tri=titre&order=desc"><i class="material-icons small">arrow_drop_down</i></a>
+				<a href="?controller=besoin&tri=titre&order=asc"><i class="material-icons small">arrow_drop_up</i></a>
+			</p>
 		</div>
 		<div class="col m6 s12">
-			
+			<p>
+				Date
+				<a href="?controller=besoin&tri=date_debut&order=desc"><i class="material-icons small">arrow_drop_down</i></a>
+				<a href="?controller=besoin&tri=date_debut&order=asc"><i class="material-icons small">arrow_drop_up</i></a>
+			</p>
+			<p>
+				Client
+				<a href="?controller=besoin&tri=rs_client&order=desc"><i class="material-icons small">arrow_drop_down</i></a>
+				<a href="?controller=besoin&tri=rs_client&order=asc"><i class="material-icons small">arrow_drop_up</i></a>
+			</p>
 		</div>
 	</div>
 </div>
